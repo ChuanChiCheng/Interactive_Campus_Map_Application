@@ -185,14 +185,13 @@ public class CampusMapFrontend implements CampusMapFDInterface{
 		// Get the list of building first
 		this.allBuilding = backend.getAllBuildings();
 		
-		System.out.println("Building name\t\tCoordinate\tAddress");
-		for(int i = 0; i < this.allBuilding.size(); i++) {
-			String name = this.allBuilding.get(i).getName();
-			String address = this.allBuilding.get(i).getAddress();
-			String coordinate = "(" + Integer.toString(this.allBuilding.get(i).getX()) + ", " + Integer.toString(this.allBuilding.get(i).getY()) + ")";
-			System.out.print(name + "\t\t");
-			System.out.print(coordinate + "\t");
-			System.out.println(address);
+		System.out.printf("%-30s %-15s %-30s%n", "Building name", "Coordinate", "Address");
+		for (int i = 0; i < this.allBuilding.size(); i++) {
+    		String name = this.allBuilding.get(i).getName();
+    		String address = this.allBuilding.get(i).getAddress();
+    		String coordinate = "(" + this.allBuilding.get(i).getX() + ", " + this.allBuilding.get(i).getY() + ")";
+    
+    		System.out.printf("%-30s %-15s %-30s%n", name, coordinate, address);
 		}
 	}
 	

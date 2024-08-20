@@ -10,34 +10,33 @@ public class CampusMapBD implements CampusMapBDInterface {
 
 	@Override
 	public List<Building> getAllBuildings() {
-		Building b1 = new Building(30,50,"B1","123123123123123123");
-        Building b2 = new Building(12323,33333,"B2","1000");
-        Building b3 = new Building(333,222,"B3","fjajidfja;dlkj");
-        Building b4 = new Building(66,77,"B4","ja;dlkfje;oif");
-        Building b5 = new Building(1,2,"B5","ja;ldfkjakijiji");
+		Building library = new Building(43,89,"Helen C. White Hall","600 N. Park St.");
+        Building science_hall = new Building(43,70,"Science Hall","550 N. Park St.");
+        Building mosse = new Building(76,66,"Mosse Humanities Building","455 N Park St");
+        Building chemistry = new Building(32,44,"Chemistry Building","W Johnson St");
+        Building computer_science = new Building(10,100,"Computer Science","1210 W Dayton St");
         List<Building> bl = new LinkedList<>();
-        bl.add(b1);
-        bl.add(b2);
-        bl.add(b3);
-        bl.add(b4);
-        bl.add(b5);
+        bl.add(library);
+        bl.add(science_hall);
+        bl.add(mosse);
+        bl.add(chemistry);
+        bl.add(computer_science);
 		return bl;
 	}
 
 	@Override
 	public List<Building> getShortestPath(Building start, Building end) {
-		Building b1 = new Building(30,50,"B1","123123123123123123");
-        Building b2 = new Building(12323,33333,"B2","1000");
-        Building b3 = new Building(333,222,"B3","fjajidfja;dlkj");
-        Building b4 = new Building(66,77,"B4","ja;dlkfje;oif");
-        Building b5 = new Building(1,2,"B5","ja;ldfkjakijiji");
-       
+		Building library = new Building(43,89,"Helen C. White Hall","600 N. Park St.");
+        Building science_hall = new Building(43,70,"Science Hall","550 N. Park St.");
+        Building mosse = new Building(76,66,"Mosse Humanities Building","455 N Park St");
+        Building chemistry = new Building(32,44,"Chemistry Building","W Johnson St");
+        Building computer_science = new Building(10,100,"Computer Science","1210 W Dayton St");
         List<Building> bl = new LinkedList<>();
-        bl.add(b5);
-        bl.add(b3);
-        bl.add(b1);
-        bl.add(b4);
-        bl.add(b2);
+        bl.add(library);
+        bl.add(science_hall);
+        bl.add(mosse);
+        bl.add(chemistry);
+        bl.add(computer_science);
         return bl;
 	}
 
