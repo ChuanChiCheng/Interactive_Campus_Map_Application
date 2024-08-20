@@ -1,0 +1,80 @@
+Script started on 2023-04-26 22:09:41-05:00 [TERM="xterm-256color" TTY="/dev/pts/58" COLUMNS="112" LINES="41"]
+[?2004h[chuan-chi@royal-08] (1)$ git stau[Ktus
+[?2004lOn branch FrontendDeveloper
+Your branch is ahead of 'origin/FrontendDeveloper' by 1 commit.
+  (use "git push" to publish your local commits)
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	[31mlog[m
+
+nothing added to commit but untracked files present (use "git add" to track)
+[?2004h[chuan-chi@royal-08] (2)$ git add log
+[?2004l[?2004h[chuan-chi@royal-08] (3)$ git commt[Kit -am ""d"e"c"[1P"l"e"t"e"d" "f"i"r"[1P"[1P"[1P"m"y" "f"i"r"s"t" "l"o"g"
+[?2004l[FrontendDeveloper 8800f71] deleted my first log
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 log
+[?2004h[chuan-chi@royal-08] (4)$ git status
+[?2004lOn branch FrontendDeveloper
+Your branch is ahead of 'origin/FrontendDeveloper' by 2 commits.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+[?2004h[chuan-chi@royal-08] (5)$ git log -1
+[?2004l[?1h=[33mcommit 8800f71247bccb1e360b08d5a782ce3cc879f0f2[m[33m ([m[1;36mHEAD -> [m[1;32mFrontendDeveloper[m[33m)[m[m
+Author: Chuan-chi Cheng <ccheng227@wisc.edu>[m
+Date:   Wed Apr 26 22:10:29 2023 -0500[m
+[m
+    deleted my first log[m
+[K[?1l>[?2004h[chuan-chi@royal-08] (6)$ ls
+[?2004lBaseGraph.java             CampusMapBDInterface.java  FrontendDeveloperTests.java  log
+BuildingInterface.java     CampusMapBD.java           GraphADT.java                Makefile
+Building.java              CampusMapFDInterface.java  GraphReaderFD.java           TextUITester.java
+CampusMapAEInterface.java  CampusMapFrontend.java     GraphReaderInterface.java
+CampusMapAE.java           DijkstraGraph.java         junit5.jar
+[?2004h[chuan-chi@royal-08] (7)$ make runTests
+[?2004ljavac Building.java
+javac BuildingInterface.java
+javac GraphReaderFD.java
+Note: ./BaseGraph.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+javac GraphReaderInterface.java
+javac CampusMapAE.java
+javac CampusMapAEInterface.java
+javac CampusMapBD.java
+javac CampusMapBDInterface.java
+javac TextUITester.java
+javac -cp .:junit5.jar CampusMapFrontend.java
+javac -cp .:junit5.jar FrontendDeveloperTests.java
+java -jar junit5.jar -cp . --select-class=FrontendDeveloperTests
+
+Thanks for using JUnit! Support its development at https://junit.org/sponsoring
+
+[36m╷[0m
+[36m├─[0m [36mJUnit Jupiter[0m [32m✔[0m
+[36m│  └─[0m [36mFrontendDeveloperTests[0m [32m✔[0m
+[36m│     ├─[0m [34mtest1()[0m [32m✔[0m
+[36m│     ├─[0m [34mtest2()[0m [32m✔[0m
+[36m│     ├─[0m [34mtest3()[0m [32m✔[0m
+[36m│     ├─[0m [34mtest4()[0m [32m✔[0m
+[36m│     └─[0m [34mtest5()[0m [32m✔[0m
+[36m└─[0m [36mJUnit Vintage[0m [32m✔[0m
+
+Test run finished after 59 ms
+[         3 containers found      ]
+[         0 containers skipped    ]
+[         3 containers started    ]
+[         0 containers aborted    ]
+[         3 containers successful ]
+[         0 containers failed     ]
+[         5 tests found           ]
+[         0 tests skipped         ]
+[         5 tests started         ]
+[         0 tests aborted         ]
+[         5 tests successful      ]
+[         0 tests failed          ]
+
+[?2004h[chuan-chi@royal-08] (8)$ exit
+[?2004lexit
+
+Script done on 2023-04-26 22:11:08-05:00 [COMMAND_EXIT_CODE="0"]
